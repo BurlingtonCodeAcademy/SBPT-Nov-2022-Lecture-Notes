@@ -1,0 +1,101 @@
+/* 
+    Building Blocks
+
+    selector {
+        [Declaration Block]
+        property: value;
+    }
+
+    3 way to target:
+    element, class, & id
+
+*   Order of "Final Response" Hierarchy
+    - !important
+    - Inline CSS
+    - ID Selectors
+    - Class Selectors
+    - Element
+*/
+
+nav { 
+    /* we targeting the element */
+    background-color: #d2d2d2;
+    /* 
+        - preset colors: red, blue, yellow, etc.
+        - rgb & rgba (red, green, blue, alpha)
+            - alpha determines transparency
+            - ex: rgba(200, 15, 100, .5);
+        - Hexidecimal
+            - 16 digits: 0-9, A-F
+            - ex: #d2d2d2
+    */
+    overflow: hidden;
+}
+
+/* IDs */
+#home {
+    float: left;
+    color: red !important;
+    color: green !important;
+    /* important will take on the "last call" for !important */
+}
+
+/* Targeting a Class */
+
+.btn {
+    float: right;
+    color: black;
+    text-align: center;
+    /* width: 85px; */
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
+    /* padding: 14px 16px 14px 16px; */
+    /* padding: 14px; */
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* 
+* Compound Operators: 
+    > Refers to direct children of an element.
+    , Matching selector.
+    + Immediate sibling of an element.
+    ~ Subsequent sibling of an element.
+*/
+
+nav .btn {
+    /* Points to the Nav and ANY class within it, or children of, named "btn" */
+    text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+div .paragraph > p {
+    /* targeting any div with a class "paragraph" that is holding a <p> element */
+    color: red;
+}
+
+.paragraph + div {
+    color: rgb(6, 128, 0);
+}
+
+a:hover {
+    color: lightblue;
+    /* 
+    mousing over any anchor tag will alter its color
+        -"home" doesn't change due to !important
+    */
+}
+
+a:active {
+    color: purple;
+    text-shadow: 2px 2px 2px rgb(255,255,255);
+    /* COPY A BLOCK OF CODE IN VSCODE 
+        ALT+SHIFT+DownArrow/UpArrow
+
+        MOVE A BLOCK OF CODE
+        ALT+Down/Up Arrow
+    */
+}
+
