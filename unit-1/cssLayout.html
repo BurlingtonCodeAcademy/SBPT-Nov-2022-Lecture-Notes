@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cssLayout.css">
+    <title>CSS Layout</title>
+</head>
+<body>
+    <!-- 
+        Block:
+            - New line
+            - Full width of body
+            - Can contain both block and inline
+
+        Inline: 
+            - Same line
+            - Width of content
+            - Can ONLY contain data or other inline elements
+    
+    * emmet sample: 
+        .className#id-name       ->  <div class="className" id="id-name"></div>
+    -->
+
+    <div class="sample" id="block-sample"></div>
+    <div class="sample" id="inline-sample">Width of Content</div>
+    <div class="sample" id="none-sample"></div>
+
+    <hr>
+
+    <h1>Block Element Examples</h1>
+    <div class="block-elements">
+        <div>Divs & h1-h6</div>
+        
+        <table>
+            <tr>
+                <!-- Tables -->
+                <td>One</td>
+            </tr>
+        </table>
+
+        <form>
+            Forms
+        </form>
+
+        <ul>
+            <li>Unordered Lists</li>
+        </ul>
+
+        <ol>
+            <li>Ordered Lists</li>
+        </ol>
+
+        <nav>Nav Element</nav>
+    </div>
+
+    <h1>Inline Element Examples</h1>
+    <div class="inline-elements">
+        <span>Span</span>
+        <a href="#">anchor tags</a>
+        <i>italics</i>
+        <em>emphasis</em>
+        <b>bold</b>
+        <strong>strong</strong>
+        <img src="#" alt="#">
+        <button>Buttons</button>
+    </div>
+
+    <hr>
+
+    <div class="sample">
+        <div id="relative-sample"></div>
+        <div id="absolute-sample"></div>
+        <div id="fixed-sample"></div>
+        <div id="static-sample"></div>
+    </div>
+
+    <!-- 
+        "position: relative" means "my children are positioned relative to ME"
+        "position: absolute" means "I am positioned relative to my parent"
+    -->
+
+    <div id="for-spacing"></div>
+
+</body>
+</html>
