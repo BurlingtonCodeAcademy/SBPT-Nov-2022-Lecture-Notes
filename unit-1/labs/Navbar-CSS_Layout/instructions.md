@@ -46,4 +46,3 @@
   - This section should span the complete height of the viewport.
   - Give this section a different background color as the other two main elements.
 
-

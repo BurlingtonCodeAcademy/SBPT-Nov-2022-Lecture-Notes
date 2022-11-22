@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 3em;
+    background-color: lightblue;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 0 2em;
+    float: left;
+}
+
+/* nav ul li:first-child {
+    float: right;
+} */
+
+#brand { /* targeting the id of the first li element */
+    float: right;
+}
+
+#about {
+    padding: 5em 2em;
+    height: 100vh;
+    background-color: lightgoldenrodyellow;
+}
+
+#shop {
+    height: 100vh;
+    background-color: darkgoldenrod;
+}
+
