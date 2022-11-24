@@ -1,0 +1,82 @@
+/* ! GRID STYLING */
+/* 
+    grid-template-rows: 2fr 20% 200px;   <-- details the row only.
+
+    grid-template-column: 2fr 50% 100px;  <-- details the column only
+            - can use the same measurements.
+
+    column: 
+        - required
+        - If not set, only 1 column will default.
+    rows:
+        - optional
+        - necessary if rows are different sizes
+    gap: 
+        - determines the gap between rows/columns.
+        - property used with gap is uniform.
+            - column-gap: specifying column only.
+            - row-gap: specifying row only.
+*/
+
+.grid-sample {
+    display: grid;
+    grid-template: repeat(4, 25%) / repeat(8, 12.5%);
+    /* 
+        - rows will be divided up into quarters.
+        - columns are divided into 8ths.
+    */
+}
+
+.grid-sample h1 {
+    text-align: center;
+    grid-column: span 8;
+    /* 
+        - h1 spans the width of 8 columns.
+    */
+}
+
+#grid-sidebar {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    /* 
+        - will start in column 1 and only cover 2 columns.
+        - will start on the second row and cover only 2 rows.
+    */
+}
+
+#grid-article {
+    grid-area: 2 / 3 / 3 / 9;
+    /* 
+        - row start / column start / row end / column end
+    */
+}
+
+.grid-sample footer {
+    text-align: center;
+    grid-column: 1 / span 8;
+    grid-row: 4;
+    /* 
+        - Starts in column 1 and spans the entire 8 columns
+        - Will start at the 4th row.
+            - Doesn't need to note ending as this is the last row.
+    */
+}
+
+/* ! FLEX STYLING */
+.flex-sample {
+    
+}
+
+#flex-container {
+    
+}
+
+#inside-card {
+    
+}
+
+.flex-sample footer {
+    
+}

@@ -1,0 +1,107 @@
+html body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3, b {
+    text-decoration: underline red;
+}
+
+/* GRID STATIC INFO */
+.grid-sample {
+    border: 2px solid black;
+    margin: 1em;
+    height: 45vh;
+}
+
+.grid-sample h1 {
+    /* text-align: center; */
+    width: 100%;
+}
+
+#grid-sidebar {
+    margin: auto;
+    padding: .25em 1.5em;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+#grid-article {
+    padding: 1em;
+    margin: auto;
+}
+
+.grid-sample footer {
+    padding: .5rem 0;
+    width: 100%;
+    /* text-align: center; */
+}
+
+footer ul {
+    height: auto;
+    padding: auto;
+}
+
+.grid-sample footer ul li{
+    display: inline;
+    margin: 0 2em;
+}
+
+footer ul li {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+/* FLEX STATIC INFO */
+.flex-sample {
+    border: 2px solid black;
+    margin: 1em;
+}
+
+#flex-container .card {
+    border-radius: 20px;
+    height: auto;
+    width: 25%;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0 .5rem;
+}
+
+#flex-container .card:nth-child(odd) {
+    background-color: rgba(250,150,50,.1);
+}
+
+#flex-container .card:nth-child(even) {
+    background-color: rgba(50,250,150,.1);
+}
+
+.card p, li {
+    font-size: small;
+}
+
+.bubble {
+    height: 49px;
+    width: 49px;
+    border: black 1px dashed;
+    border-radius: 40px;
+}
+
+.flex-sample footer {
+    width: 100%;
+    height: 50px;
+}
