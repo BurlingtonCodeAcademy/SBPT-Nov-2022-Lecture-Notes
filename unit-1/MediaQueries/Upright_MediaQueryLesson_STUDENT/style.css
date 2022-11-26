@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/*Nav*/
+header {
+
+    width: 100vw;
+    height: 200px;
+    background-image:
+    linear-gradient(to bottom, rgba(245,246,252,.52), rgba(45, 45, 41, 0.73)),
+    url('./assets/bar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75%;
+}
+
+header > a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: right;
+    margin: 0 2rem;
+    text-shadow: 2px 2px 2px black;
+}
+
+nav {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 2rem;
+    list-style-type: none;
+    font-size: large;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightgray;
+}
+
+/* About */
+#about {
+    margin: 2rem;
+}
+
+article {
+    margin: 0 auto;
+    text-align: left;
+}
+
+article > p {
+    max-width: 700px;
+    float: right;
+    /* align-self: center; */
+}
+
+/* Menu */
+#menu {
+    /* text-align: center; */
+    margin: 2rem;
+}
+
+.menu-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-desc {
+    display: block;
+    width: 500px;
+    margin: 2rem 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.desc {
+    display: flex;
+}
+
+.desc > * {
+    margin: 0 1rem;
+}
+
+img {
+    border-radius: 20px;
+    max-width: 200px;
+}
+
+/* Contact */
+#contact {
+    margin: 0 2rem 10vh 2rem;
+}
+
+/* Footer */
+footer {
+    background: black;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 2rem;
+    float: right;
+}
+
