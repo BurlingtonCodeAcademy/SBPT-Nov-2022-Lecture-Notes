@@ -1,0 +1,31 @@
+/* 
+        Using Grid:
+
+        - Center the keypad both vertically and horizontally.
+        - Align the keys into a 3x4 grid so that they are evenly portioned.
+*/
+body {
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+    height: 100vh;
+    margin: 0;
+}
+
+#keypad {
+    display: grid;
+    grid-template: repeat(4, 25%) / repeat(3, 1fr);
+    text-align: center;
+    grid-area: 2 / 2 / span 3 / span 3;
+    /* 
+        - The keypad starts at the 2nd row and column ---> stretches across 3 complete fractions. 
+        - The template built evenly sets the 12 children elements within the keypad, but this could be be given greater detail if we wanted.
+    */
+}
+
+.key {
+    border: 1px solid black;
+    background-color: slategray;
+    font-size: xx-large;
+    color: white;
+    padding: 25%;
+}
