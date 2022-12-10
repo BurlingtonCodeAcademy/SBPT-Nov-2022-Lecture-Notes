@@ -67,3 +67,31 @@ function letTest() {
 }
 letTest();
 console.log(`Let - Outside function: ${b}`);
+
+//! Hoisting
+/* 
+    - JS reads from top to bottom in two passes. Line by line.
+        1st pass:
+            - Made by the compiler. This is where hoisting is initiated.
+            - compiled for execution.
+        2nd pass: 
+            - variables are assigned.
+            - Execution phase
+                - runs any hoisted code.
+*/
+
+// console.log(personName);
+let personName = 'Everly';
+console.log(abc1243)
+
+b(); // doesn't break because function b() is hoisted to the top of our code
+
+function b() {
+    console.log("I have been hoisted");
+}
+
+newFunction();
+
+let newFunction = () => {
+    console.log("hoisted?")
+}
