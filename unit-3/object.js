@@ -62,5 +62,65 @@ theSimpsons.characters.push('Ned');
 
 // change the aired date of episode 2 in season 1 to Jan 14th 1990
 theSimpsons.seasons["season one"][1].aired = '1990-01-14';
-console.log(theSimpsons.seasons["season one"][1]);
-console.log(theSimpsons.seasons["season one"][2][1]);
+// console.log(theSimpsons.seasons["season one"][1]);
+// console.log(theSimpsons.seasons["season one"][2][1]);
+
+//! Object Methods
+//* Object.keys();
+
+// console.log('Keys: ', Object.keys(theSimpsons));
+
+//* Object.values();
+// console.log('Values: ', Object.values(theSimpsons));
+
+//* Object.create();
+const futurama = Object.create(theSimpsons);
+// console.log(futurama);
+futurama.id = 2;
+futurama.est = 1999;
+// console.log(futurama);
+
+// const sample = {};
+
+//* delete object.key
+futurama.currently_running = false;
+
+// console.log('BEFORE: ', Object.keys(futurama));
+delete futurama.currently_running;
+// console.log('AFTER: ', Object.keys(futurama));
+
+//! Destructuring
+
+const { characters, seasons } = theSimpsons;
+console.log('Destructuring Characters', characters);
+console.log('Seasons', seasons);
+characters.push('Meo'); // Typo
+// console.log(characters);
+characters[6] = 'Moe';
+console.log(characters);
+
+const { est: established, currently_running: on_air } = theSimpsons;
+console.log(established);
+console.log(on_air);
+
+console.log("Doesn't Change Original: ", Object.keys(theSimpsons));
+
+//! Spread with Objects
+const simpsonCharacters = {
+    simpsonsHouse: ['Homer','Marge','Bart','Lisa','Maggie'],
+    moesTavern: ['Moe','Barney']
+};
+
+const generalLocations = {
+    park: 'statue',
+    beach: 'dock',
+    lake: '3-eyed fish'
+};
+
+const locations = {
+    ...simpsonCharacters,
+    dmv: ['Patty','Selma'],
+    ...generalLocations
+};
+
+console.log(locations);

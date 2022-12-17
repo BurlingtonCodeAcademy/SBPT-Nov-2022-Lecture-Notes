@@ -217,3 +217,130 @@ console.log('Find: ', tmnt.find(c => c === character));
 
 character = 'Splinter';
 tmnt.find((c,i) => console.log("character: ", c === character, "index", i));
+
+//! Array Destructuring
+/* 
+    - Allows us to unpack values from arrays into distinct variables.
+    - Similar syntax as array literals, but the square brackets are on the left of the assignment operator (=)
+    - Great way to pull info from array and assign to own variable.
+*/
+
+// const fullName = ['Jane', 'Doe'];
+// const firstName = fullName[0];
+// const lastName = fullName[1];
+// console.log(firstName, lastName);
+
+let [ firstName, lastName ] = fullName;
+console.log(firstName);
+console.log(lastName);
+
+firstName = "John";
+console.log(firstName);
+
+//* Spread Operator
+/* 
+?   Concept of the Spread Operator - NOT the syntax:
+
+    const fullName = ['Rocket', 'Racoon'];
+
+    ...fullName  // 'Rocket', 'Racoon'
+    const elements = ...fullName;           <---
+    const elements = 'Rocket', 'Racoon' // is this
+
+* Denoted by three consecutive periods: ...ARRAY
+*/
+
+const fullName = ['Jane', 'Doe'];
+
+const copiedFullName = [...fullName];
+// console.log('Copied: ', copiedFullName);
+const copiedFullName2 = [fullName];
+// console.log('Copied 2: ', copiedFullName2);
+
+// let numberArray = []
+
+// for(i = 0; i < 20; i++){
+//     numberArray.push(i);
+// };
+
+// console.log(numberArray);
+// let newNumberArray = [...numberArray];
+// console.log(newNumberArray);
+
+fullName.push('Mrs.');
+console.log('Full Name: ', fullName);
+console.log('Copied Name: ', copiedFullName);
+
+//* with Numbers
+console.log(Math.min(1,5,-3));
+
+const prices = [10.99, 5.99, 3.99, 5.59];
+// console.log(Math.min(prices));
+console.log(Math.min(...prices));
+
+//* Changing both the Original and Copied Array
+const persons = [
+    {
+        name: 'Jane',
+        age: 28
+    },
+    {
+        name: 'John',
+        age: 35
+    }
+]
+
+// const copiedPersons = persons.map(person => ({
+//     name: person.name,
+//     age: person.age
+// }));
+const copiedPersons = [...persons];
+
+persons.push({ name: 'Anna', age: 29 });
+copiedPersons[0].name = "Sue";
+
+console.log('Persons: ', persons);
+console.log('Copied Persons: ', copiedPersons);
+
+//* Variables within Memory
+
+let x = 10;
+let y = 'abc';
+let z = null;
+
+let a = x;
+let b = y;
+
+a = 5;
+b = 'def';
+
+console.log(x, y, a, b);
+
+let arr = [];
+arr.push(1);
+
+let reference = [1];
+let refCopy = reference;
+
+//* Rest Syntax
+/* 
+    - Looks exactly like spread syntax
+    - Spread -> "expands" an array
+    - Rest -> "condenses" an array
+*/
+
+const fullNameAgain = ['Jane', 'Doe', "Mrs.", { 
+    month: 03, date: 22, year: 1973
+}, 2, 'test','4',true, false ];
+
+let janesName = fullNameAgain[0];
+// const [ newFirst, newLast, ...moreInfo ] = fullNameAgain;
+let [ newFirst, newLast, , ...moreInfo ] = fullNameAgain;
+console.log(newFirst);
+console.log(newLast);
+console.log(moreInfo);
+
+newFirst = "Alex"; // reassigned
+console.log(newFirst);
+moreInfo[1] = 5;
+console.log('updated rest: ', moreInfo);
