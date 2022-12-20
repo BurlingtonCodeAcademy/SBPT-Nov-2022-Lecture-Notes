@@ -49,11 +49,8 @@ const presidents = [
 //! Challenge 1:
 // How many presidents have we had?
 
-
-
 //! Challenge 2:
 // Create a list of all presidents that are alive.
-
 
 //! Challenge 3:
 /* 
