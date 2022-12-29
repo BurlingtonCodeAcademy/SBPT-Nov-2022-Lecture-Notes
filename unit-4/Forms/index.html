@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Animal Table</h1>
+
+    <!-- User Form -->
+    <div id="container">
+        <form>
+
+            <label for="species">Add Animals</label>
+            <input 
+                autocomplete="off"
+                type="text"
+                placeholder="Animal Type"
+                name="species"
+            >
+            <br>
+
+            <label for="name">What is its' name?</label>
+            <input 
+                type="text"
+                autocomplete="off"
+                name="name"
+                placeholder="Name of Animal"
+            >
+
+            <div id="radio-btn">
+                <label>Male</label>
+                <input name="sex" type="radio" value="male">
+                <label>Female</label>
+                <input name="sex" type="radio" value="female">
+            </div>
+
+            <input id="submit-btn" value="Add" type="submit">
+
+        </form>
+
+    </div>
+
+    <!-- Table -->
+    <div id="table-window">
+        <table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Sex</th>
+                        <th>Species</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- JS will fill this in -->
+                </tbody>
+            </table>
+        </table>
+    </div>
+
+    
+    <script src="./script.js"></script>
+</body>
+</html>

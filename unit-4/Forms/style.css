@@ -1,0 +1,59 @@
+body {
+    display: grid;
+    grid-template: repeat(8, 12.5%) / repeat(4, 25%);
+    height: 100vh;
+    margin: 0;
+    overflow-y: hidden;
+    background-color: lightgray;
+}
+
+/* HEADER */
+h1 {
+    text-align: center;
+    grid-column: span 4;
+}
+
+/* FORM */
+#container {
+    grid-area: 2 / 2 / 4 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+#container input {
+    margin: .5rem 0;
+}
+
+#radio-btn {
+    display: flex;
+    margin: 0 2rem;
+    justify-content: space-around;
+}
+
+/* TABLE */
+
+#table-window {
+    grid-area: 5 / 2 / span 3 / span 2;
+    text-align: center;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+}
+
+table thead {
+    position: sticky;
+    top:0;
+    background: whitesmoke;
+}
+
+tbody tr:nth-child(even) {
+    background-color: slategray;
+    color:white;
+}
