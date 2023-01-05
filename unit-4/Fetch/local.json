@@ -1,0 +1,40 @@
+{
+    "fellowship": [
+        {
+            "name": "Frodo",
+            "race": "hobbit"
+        },
+        {
+            "name": "Samwise",
+            "race": "hobbit"
+        },
+        {
+            "name": "Merry",
+            "race": "hobbit"
+        },
+        {
+            "name": "Pippen",
+            "race": "hobbit"
+        },
+        {
+            "name": "Gandalf",
+            "race": "wizard"
+        },
+        {
+            "name": "Legolas",
+            "race": "elf"
+        },
+        {
+            "name": "Gimli",
+            "race": "dwarf"
+        },
+        {
+            "name": "Aragorn",
+            "race": "man"
+        },
+        {
+            "name": "Boromir",
+            "race": "man"
+        }
+    ]
+}
