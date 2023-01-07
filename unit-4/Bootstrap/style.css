@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    height: 100vh;
+    padding-top: 6rem;
+    background-image: url('https://images.unsplash.com/photo-1619843254593-ca3f3fb0d6c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1975&q=80');
+    background-size: cover;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    margin: 0;
+    z-index: 1;
+}
+
+
+.random-card {
+    display: flex;
+    height: 45vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    text-align: center;
+}
+
+/* Display Cards */
+#kept-cards {
+    margin: 2rem 2rem;
+    background-color: rgba(255,255,255,.75);
+}
+
+p {
+    text-align: center;
+}
+
+/* SAMPLE */
+.row-cols-2 {
+    /* STYLE */
+}
+
+.row-cols-4 {
+    /* styling */
+}
+
+.row-cols-3 {
+    /* style */
+}
