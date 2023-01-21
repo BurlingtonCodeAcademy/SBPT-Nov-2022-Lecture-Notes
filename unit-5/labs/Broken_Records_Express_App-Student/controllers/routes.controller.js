@@ -26,7 +26,7 @@ router.get('/:id', async(req,res) => {
     try {
         const id = req.params.id;
         
-        let result = db.filter(i => i.id == id);
+        let result = await db.filter(i => i.id == id);
         
         if(result.length > 0) {
             res.status(200).json({
@@ -136,7 +136,7 @@ router.delete('/:id', async(req,res) => {
             if(err) throw err;
 
             const db = JSON.parse(data);
-            console.log(db.length)
+            // console.log(db.length)
             const keptRecords = db.filter(i => i.id != id);
             console.log(keptRecords.length)
             // console.log(keptRecords);
