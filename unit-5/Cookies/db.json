@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "item": "milk",
+        "price": 2.89
+    },
+    {
+        "id": 2,
+        "item": "bread",
+        "price": 3.99
+    },
+    {
+        "id": 3,
+        "item": "hamburger",
+        "price": 5.99
+    },
+    {
+        "id": 4,
+        "item": "coffee",
+        "price": 12.59
+    },
+    {
+        "id": 5,
+        "item": "cheese",
+        "price": 2.79
+    }
+]
