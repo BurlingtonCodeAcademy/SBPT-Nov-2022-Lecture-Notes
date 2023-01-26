@@ -63,12 +63,12 @@ This is an in-class build where we are creating a quick server that covers the C
 |X| Build GET All by Class | `forEach()` / `filter()` |
 |X | Consider conditions | `toLowerCase()` |
 |X | Test Route | postman |
-| | Build POST One |  |
-| | Test Route |  |
-| | Build PUT One by ID |  |
-| | Test Route |  |
-| | Build DELETE One by ID | |
-| | Test Route |  |
+| X| Build POST One | `readFile()` & `writeFile()`  |
+|X | Test Route | postman |
+|X | Build PUT One by ID | `forEach((obj,id) => {})` |
+| X| Test Route | postman |
+|X | Build DELETE One by ID | `filter(i => i.id !== id)`|
+| X| Test Route | postman |
 
 ## Stretch Goals
 | Stretch Goals | Status |
