@@ -100,3 +100,40 @@ const UserSchema = new mongoose.Schema({
 
 module.exports = mongoose.model('User', UserSchema);
 ```
+
+## Bcrypt
+- `npm i bcrypt`
+- dependency that handles encryption of data
+  - most common use: passwords
+    - can be use on anything with strings.
+- Hashing produces a one-way randomized string based off the plain text string that provided.
+  - Use `salting` as an extra layer of encryption.
+- Salting:
+  - randomized string included within the hashing prior to being set to the database.
+
+example code:
+```js
+bcrypt.hashSync("abc123", 10);
+```
+- first argument: password
+- second argument: number of times the password will be salted.
+
+## JWT
+- JSON web token
+- `npm i jsonwebtoken`
+- A way for our server to authenticate the user.
+
+example code:
+```js
+const token = jwt.sign({id: user_id}, "secret message", {expiresIn: 60 * 60 * 24});
+```
+- `sign(payload, message, options)`
+  - 3 arguments
+    - payload:
+      - In the sample we are using an object that details the id of the user.
+    - encrypt/decrypt message:
+      - passed in as a string in the sample.
+      - Typically store as a `.env` variable.
+    - Options set expiration
+      - represents seconds or a string time span.
+        - ex: `"2 days"` or `"10h"`
