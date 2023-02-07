@@ -4,6 +4,8 @@ const app = express();
 const PORT = process.env.PORT || 4001;
 const userController = require('./controllers/user.controller.js');
 const movieController = require('./controllers/movie.controller');
+// const validateSession = require('./middleware/validate-session'); //* used for validation for an entire controller
+
 const mongoose = require('mongoose'); // used from node_modules
 const DBURL = process.env.DBURL; // connection variable from .env
 
@@ -17,6 +19,7 @@ db.once("open", () => console.log(`Connected: ${DBURL}`)); // event listener to 
 app.use(express.json()); // added to allow us to accept JSON data from the body of our client.
 
 app.use('/user', userController);
+// app.use(validateSession); //* requires validation for any controller under this app.use()
 app.use('/movie', movieController);
 
 
