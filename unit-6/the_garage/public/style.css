@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+}
+
+#form-display {
+    width: 650px;
+    margin: 0;
+    padding-left: 200px;
+}
+
+form {
+    margin: 1em;
+    text-align: right;
+    width: 500px;
+}
+
+form > input {
+    margin: .25em 0;
+    width: 350px;
+}
+
+#display-vehicles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+}
