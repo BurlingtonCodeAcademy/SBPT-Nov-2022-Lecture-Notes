@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 4001;
+const cors = require('cors');
+
 const userController = require('./controllers/user.controller.js');
 const movieController = require('./controllers/movie.controller');
 // const validateSession = require('./middleware/validate-session'); //* used for validation for an entire controller
@@ -17,6 +19,7 @@ const db = mongoose.connection; // event listener to check if connected.
 db.once("open", () => console.log(`Connected: ${DBURL}`)); // event listener to check connection.
 
 app.use(express.json()); // added to allow us to accept JSON data from the body of our client.
+app.use(cors());
 
 app.use('/user', userController);
 // app.use(validateSession); //* requires validation for any controller under this app.use()
