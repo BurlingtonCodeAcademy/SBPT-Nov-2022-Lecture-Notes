@@ -187,3 +187,19 @@ useEffect(() => {
   // Runs any time any dependecy changes
 }, [state])
 ```
+
+# useParams()
+- Comes from React-Router-DOM
+  - Considers the `path` provided within the `<Route>` in `App.jsx`
+  - Recognizes the `:id` as a parameter value in which to respond.
+  - We are able to access the key of `id` much in the same way we did with the server.
+
+# useNavigate()
+- Comes from React-Router-DOM
+  - Simply helps us move from one endpoint to another as we desire.
+  - Must pass in the path as a argument.
+
+ex:
+```jsx
+navigate('/sample-endpoint');
+```

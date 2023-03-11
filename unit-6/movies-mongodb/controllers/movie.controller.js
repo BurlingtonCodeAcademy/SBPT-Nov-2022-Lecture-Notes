@@ -57,7 +57,7 @@ router.post('/', validateSession, async (req, res) => {
 */
 router.get('/:id', async (req, res) => {
     try {
-        console.log('IN ID ROUTE: ', req.params.id)
+        // console.log('IN ID ROUTE: ', req.params.id)
         const { id } = req.params;
         const movie = await Movie.findOne({_id: id});
 
